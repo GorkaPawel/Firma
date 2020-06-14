@@ -1,0 +1,72 @@
+nav {
+  background-color: #349D63;
+  height: 60px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 11;
+}
+main {
+  position: fixed;
+  top: 60px;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+nav {
+  display: flex;
+}
+.right-nav {
+  margin-left: auto;
+}
+a {
+  color: inherit;
+  text-decoration: unset;
+}
+
+.active-link {
+  color: var(--card-color) !important;
+}
+nav a {
+  color: var(--bg-color);
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+nav div {
+  display: flex;
+  align-items: center;
+}
+nav div a  {
+  padding: 0 20px;
+}
+nav a:hover {
+  color: var(--card-color);
+}
+nav img {
+  cursor: pointer;
+}
+.profile-menu {
+  padding: 10px;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  min-width: 200px;
+  background-color: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 10px;
+  border-bottom-left-right: 10px;
+  z-index: 12;
+}
+.profile-menu p {
+  align-self: flex-start;
+}
+.profile-menu .button {
+  align-self: flex-end;
+}

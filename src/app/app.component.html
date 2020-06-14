@@ -1,2 +1,29 @@
-<h1>{{title}}</h1>
-<app-login></app-login>
+<nav class="shadow-1">
+    <div>
+    <a routerLink=""
+       routerLinkActive="active-link"
+       [routerLinkActiveOptions]="{exact:true}">
+      Kursy</a>
+  </div>
+  <div class="right-nav">
+    <div *ngIf="!loggedUser; then thenBlock else elseBlock"></div>
+    <ng-template #thenBlock>
+      <a routerLink="/register"
+         routerLinkActive="active-link">
+        Rejestracja</a>
+      <a routerLink="/login"
+         routerLinkActive="active-link">
+        Logowanie</a>
+    </ng-template>
+    <ng-template #elseBlock>
+      <img src="http://simpleicon.com/wp-content/uploads/user1-64x64.png" alt="icon" width="60px" (click)="toggleProfile()">
+      <div class="profile-menu shadow-1" *ngIf="profileOpened">
+        <p>Witaj {{loggedUser?.email}}</p>
+        <button  class="button shadow-1" (click)="logOut()">Wyloguj</button>
+      </div>
+    </ng-template>
+  </div>
+</nav>
+<main>
+  <router-outlet></router-outlet>
+</main>
