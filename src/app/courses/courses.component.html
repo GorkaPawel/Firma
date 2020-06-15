@@ -1,0 +1,39 @@
+<div class="table">
+  <div class="header-row row">
+    <div>
+      Odjazd:
+    </div>
+    <div>
+      Z:
+    </div>
+    <div>
+      do:
+    </div>
+    <div>
+      kierowca:
+    </div>
+    <div class="slots">
+      liczba miejsc:
+    </div>
+  </div>
+  <div *ngFor="let course of courses" class="row">
+    <div>
+      {{course.time}}
+    </div>
+    <div>
+      {{course.from}}
+    </div>
+    <div>
+      {{course.to}}
+    </div>
+    <div>
+      {{course.driver}}
+    </div>
+    <div class="slots">
+      {{course.slots}}
+    </div>
+    <div class="button-container">
+      <button class="button shadow-1">zarezerwuj</button>
+    </div>
+  </div>
+</div>

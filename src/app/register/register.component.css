@@ -1,0 +1,41 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 15px;
+  width: 50vw;
+  max-width: 650px;
+  min-width: 350px;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  color: #c3073f;
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+.error-message::before {
+  content: '';
+  display: block;
+  width: 1em;
+  height: 1em;
+  margin-right: .3em;
+  background-color: #c3073f;
+  clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+}
+.form label {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.form input {
+  border-bottom: 1px solid var(--font-color);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.form--group {
+  display: flex;
+  flex-direction: column;
+}
