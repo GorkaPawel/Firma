@@ -11,13 +11,24 @@ import { CoursesComponent } from './courses/courses.component';
 import {FormsService} from "./services/forms.service";
 import {AuthService} from "./services/auth.service";
 import {FormBuilder, ReactiveFormsModule} from "@angular/forms";
+import { MyCoursesComponent } from './my-courses/my-courses.component';
+import { VehiclesComponent } from './vehicles/vehicles.component';
+import {AdminGuardService} from "./services/admin.guard";
+import { DriversComponent } from './drivers/drivers.component';
+import { AddCourseFormComponent } from './add-course-form/add-course-form.component';
+import { CalculateComponent } from './calculate/calculate.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    CoursesComponent
+    CoursesComponent,
+    MyCoursesComponent,
+    VehiclesComponent,
+    DriversComponent,
+    AddCourseFormComponent,
+    CalculateComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +37,7 @@ import {FormBuilder, ReactiveFormsModule} from "@angular/forms";
     AppRoutingModule,
     ReactiveFormsModule,
   ],
-  providers: [FormsService, AuthService, FormBuilder],
+  providers: [FormsService, AuthService, FormBuilder, AdminGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

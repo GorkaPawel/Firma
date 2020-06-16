@@ -37,6 +37,7 @@ html, body {
   --bg-color: #1c1e29;
   --card-color: #383C48;
   --font-color: #DADAE1;
+  --green: #349D63;
   height: 100%;
 }
 * {
@@ -97,4 +98,23 @@ input, textarea, select, button {
 }
 button {
   cursor: pointer;
+}
+.link-button {
+  width: 100%;
+  margin-bottom: 3px;
+  text-align: center;
+}
+.submit-button {
+  margin-top: 15px;
+}
+main {
+  position: fixed;
+  top: 60px;
+  overflow-y: auto;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

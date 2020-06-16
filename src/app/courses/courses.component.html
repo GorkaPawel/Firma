@@ -27,13 +27,17 @@
       {{course.to}}
     </div>
     <div>
-      {{course.driver}}
+      {{course.driver?.name || course.driver}}
     </div>
     <div class="slots">
       {{course.slots}}
     </div>
     <div class="button-container">
-      <button class="button shadow-1">zarezerwuj</button>
+      <button class="button shadow-1" (click)="bookCourse(course)">zarezerwuj</button>
     </div>
+  </div>
+<button class="button shadow-1 add-course" *ngIf="loggedUser?.email === 'admin'" (click)="toggleForm($event)">DODAJ KURS</button>
+  <div class="form-modal" *ngIf="formOpened">
+    <app-add-course-form (closeForm)="toggleForm($event)"></app-add-course-form>
   </div>
 </div>
