@@ -54,7 +54,7 @@ export class AuthService {
     }
     const loggedUser = this.loggedUser.getValue();
     const resultIndex = (registeredUsers || []).findIndex(user => {
-      return user.email === loggedUser?.email;
+      return user.email === loggedUser.email;
     });
     if (resultIndex === -1) {
       return;

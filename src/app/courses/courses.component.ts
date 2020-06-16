@@ -12,7 +12,7 @@ export class CoursesComponent implements OnInit {
   constructor(private auth: AuthService) {
     this.courses = courses;
   }
-  loggedUser = {};
+  loggedUser = {email: '', password: ''};
   courses;
   formOpened = false;
   toggleForm(e) {

@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
   constructor(private auth: AuthService) {
   }
 
-  loggedUser = false;
+  loggedUser = {};
   profileOpened = false;
 
   toggleProfile() {

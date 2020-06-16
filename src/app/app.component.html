@@ -19,7 +19,7 @@
       Oblicz cenę za bilet</a>
   </div>
   <div class="right-nav">
-    <div *ngIf="!loggedUser; then thenBlock else elseBlock"></div>
+    <div *ngIf="!loggedUser?.email; then thenBlock else elseBlock"></div>
     <ng-template #thenBlock>
       <a routerLink="/register"
          routerLinkActive="active-link">
@@ -32,7 +32,7 @@
       <img src="http://simpleicon.com/wp-content/uploads/user1-64x64.png" alt="icon" width="60px"
            (click)="toggleProfile()">
       <div class="profile-menu shadow-1" *ngIf="profileOpened">
-        <p>Witaj {{loggedUser?.email}}</p>
+        <p>Witaj {{loggedUser.email}}</p>
         <a routerLink="/my-courses"
            class="link-button shadow-1 button"
            routerLinkActive="active-link">
